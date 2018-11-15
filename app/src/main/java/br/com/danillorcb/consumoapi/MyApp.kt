@@ -1,0 +1,15 @@
+package br.com.danillorcb.consumoapi
+
+import android.app.Application
+import com.facebook.stetho.Stetho
+import com.facebook.stetho.okhttp3.StethoInterceptor
+import okhttp3.OkHttpClient
+
+
+
+class MyApp : Application() {
+    override fun onCreate() {
+        super.onCreate()
+        Stetho.initializeWithDefaults(this)
+    }
+}
